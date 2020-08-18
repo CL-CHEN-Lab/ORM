@@ -12,7 +12,8 @@ Option:
 -SampleName: All SampleName seperate by "," 
 
 Notice: 
-1.Pleasw pay attention all input files must have same name beside suffix, including .bnx,.xmp,.qcmap,.rcmap
+1.Pleasw pay attention all input files must have same name beside suffix, including .bnx, .xmp, .qcmap, .rcmap
+2.There are 2 channels in bionano, here the channel 1 is for green signals for mapping and channel 2 is red signals for labelling
 
 Example:
 java -jar AllRawDataRefining_1G2R.jar 
