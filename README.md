@@ -33,7 +33,7 @@ Specific usage for DNA replication analysis:
       • Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
       • Calculate FDI_RFD and draw enrichment plot around given regions (R)
       • Based on normalized signal numbers in sliding or adjacent bins using LOESS fit to generate smoothing fire efficiency curves (R)
-      • Dertermine initial zone with peak calling algorithm (R)
+      • Dertermine initial zones with peak calling algorithm (R)
       • Draw labeling signaling enrichment in given regions(R)
 
 
