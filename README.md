@@ -17,23 +17,24 @@ Common usage (Could be applied on any DNA signal labeling analysis):
       • Calibrate and calculate the labeling signal position	
       • Create GTF like file to visualize signal by IGV
       • Generate all DNA fiber coordinates in bed file format
-      • Calculate labeling signal number in Sliding or Adjacent windows, and do normalization by mapped fiber depth in each bin
+      • Calculate labeling signal number in sliding or adjacent windows, and do normalization by mapped fiber depth in each bin
       • Using Gaussian mixed model to analyze the distance distribution between labelling signals to identify proper cutoff for the signal segementation
       • Perform the segmentation to get the segments with cluster of adjacent signals (in our case, ORM tracks, i.e. DNA replication origins or on-going replication forks), in bed file format
 
 
 Specific usage for ORM segmentation analysis:
 
-      •	Add replication Fork Direction Index (FDI) for illustrating signal polarity into the ORM segmentation bed file
+      • Add replication Fork Direction Index (FDI) for illustrating signal polarity into the ORM segmentation bed file
 
 
 Specific usage for DNA replication analysis:
 
-      •	Add replication timing (RT) obtained by Repli-Seq or other related techiniques into the ORM bed file
-      •	Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
-      •	Calculate FDI_RFD and draw enrichment plot around given regions (R)
-      •	Based on normalized signal numbers in sliding or adjacent bins using LOESS fit to generate smoothing fire efficiency curves and capture initial zone with peak calling (R)
-      •	Draw labeling signaling enrichment in given regions(R)
+      • Add replication timing (RT) obtained by Repli-Seq or other related techiniques into the ORM bed file
+      • Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
+      • Calculate FDI_RFD and draw enrichment plot around given regions (R)
+      • Based on normalized signal numbers in sliding or adjacent bins using LOESS fit to generate smoothing fire efficiency curves (R)
+      • Dertermine initial zone with peak calling algorithm (R)
+      • Draw labeling signaling enrichment in given regions(R)
 
 
 The majority of the toolkit was developped using JAVA and some fonctions are in R, specified as (R). See the User Manual and our preprint manuscript for detail.
