@@ -13,24 +13,24 @@ In order to map replication origins at single molecule level at a high-throughpu
 # The main function of the toolkit
 
 Common usage (Could be applied on any DNA signal labeling analysis):
-	•	Calibrate and calculate the labeling signal position	
-	•	Create GTF like file to visualize signal by IGV
-	•	Generate all DNA fiber coordinates in bed file format
-	•	Calculate labeling signal number in Sliding or Adjacent windows, and do normalization by mapped fiber depth in each bin
-	•	Using Gaussian mixed model to analyze the distance distribution between labelling signals to identify proper cutoff for the signal segementation
-	•	Perform the segmentation to get the segments with cluster of adjacent signals (in our case, ORM tracks, i.e. DNA replication origins or on-going replication forks), in bed file format
+      • Calibrate and calculate the labeling signal position	
+      • Create GTF like file to visualize signal by IGV
+      • Generate all DNA fiber coordinates in bed file format
+      •	Calculate labeling signal number in Sliding or Adjacent windows, and do normalization by mapped fiber depth in each bin
+      •	Using Gaussian mixed model to analyze the distance distribution between labelling signals to identify proper cutoff for the signal segementation
+      •	Perform the segmentation to get the segments with cluster of adjacent signals (in our case, ORM tracks, i.e. DNA replication origins or on-going replication forks), in bed file format
 
 Specific usage for ORM segmentation analysis:
-	•	Add replication Fork Direction Index (FDI) for illustrating signal polarity into the ORM segmentation bed file
+      •	Add replication Fork Direction Index (FDI) for illustrating signal polarity into the ORM segmentation bed file
 
 Specific usage for DNA replication analysis:
-	•	Add replication timing (RT) obtained by Repli-Seq or other related techiniques into the ORM bed file
-	•	Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
-	•	Calculate FDI_RFD and draw enrichment plot around specific regions (R)
-	•	Based on normalized signal number in sliding or adjacent bins using LOESS fit to get smoothing fire efficiency curves and capture initial zone by peak calling.(R)
-	•	Draw labeling signaling enrichment in specific regions(R)
+      •	Add replication timing (RT) obtained by Repli-Seq or other related techiniques into the ORM bed file
+      •	Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
+      •	Calculate FDI_RFD and draw enrichment plot around given regions (R)
+      •	Based on normalized signal numbers in sliding or adjacent bins using LOESS fit to generate smoothing fire efficiency curves and capture initial zone with peak calling (R)
+      •	Draw labeling signaling enrichment in given regions(R)
 
-See the User Manual and our manuscript for detail.
+The majority of the toolkit was developped using JAVA and some fonctions are in R, specified as (R). See the User Manual and our preprint manuscript for detail.
 
 
 # Authors:
@@ -43,7 +43,7 @@ Don't hesitate to contact the authors or open an issue for any questions.
 
 
 
-# References:
+# Reference:
 
 Wang W, Klein K, Proesmans K, Yang H, Marchal C, Zhu X, Borrman T, Hastie A, Weng Z, Bechhoefer J*, Chen CL*, Gilbert DM* and Rhind N*. 2020. Genome-Wide Mapping of Human DNA Replication by Optical Replication Mapping Supports a Stochastic Model of Eukaryotic Replication Timing. bioRxiv 2020.08.24.263459. https://www.biorxiv.org/content/10.1101/2020.08.24.263459v1 
 
