@@ -12,18 +12,18 @@ In order to map replication origins at single molecule level at a high-throughpu
 
 # The main function of the toolkit
 
-Common usage (Could be applied on any DNA signal labeling analysis)
-	•	Calibrate and calculate the labeling signal position
+Common usage (Could be applied on any DNA signal labeling analysis):
+	•	Calibrate and calculate the labeling signal position	
 	•	Create GTF like file to visualize signal by IGV
 	•	Generate all DNA fiber coordinates in bed file format
 	•	Calculate labeling signal number in Sliding or Adjacent windows, and do normalization by mapped fiber depth in each bin
 	•	Using Gaussian mixed model to analyze the distance distribution between labelling signals to identify proper cutoff for the signal segementation
 	•	Perform the segmentation to get the segments with cluster of adjacent signals (in our case, ORM tracks, i.e. DNA replication origins or on-going replication forks), in bed file format
 
-Specific usage for ORM segmentation analysis
+Specific usage for ORM segmentation analysis:
 	•	Add replication Fork Direction Index (FDI) for illustrating signal polarity into the ORM segmentation bed file
 
-Specific usage for DNA replication analysis
+Specific usage for DNA replication analysis:
 	•	Add replication timing (RT) obtained by Repli-Seq or other related techiniques into the ORM bed file
 	•	Add replication fork directional (RFD) data obtained by OK-Seq into the ORM bed file
 	•	Calculate FDI_RFD and draw enrichment plot around specific regions (R)
