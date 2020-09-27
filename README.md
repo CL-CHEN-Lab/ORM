@@ -13,6 +13,7 @@ In order to map replication origins at single molecule level at a high-throughpu
 # The main function of the toolkit
 
 Common usage (Could be applied on any DNA signal labeling analysis):
+
       - Calibrate and calculate the labeling signal position	
       - Create GTF like file to visualize signal by IGV
       - Generate all DNA fiber coordinates in bed file format
