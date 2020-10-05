@@ -234,9 +234,6 @@ GetInitialZone_byBin <- function(Fit)
           Out = rep(NA, Window*2+1)
           Data.chr[(i-j):(i+j),5] <- Data.chr[(i-j):(i+j),4]/SignalSUM
           
-          
-          
-          
           SUM = Data.chr[i,5]
           N=1
           t=i
@@ -324,46 +321,47 @@ for (i in 5:5)
 
 
 ######  Get replicate IZ ####
-Names <- c("1708","1802","1807","1905")
-for(k in 1:4)
-{  
-  Path = paste("/Users/wwang/Desktop/Final-Version/Final_Initialzone/IZ_Update/SignalRatio/Sliding/",Names[k],"_SignalRatio.bed",sep="")
-  arg2 = read.table(Path)
-  IZ = list()
-  print(Names[k])
-  for(i in 1:23)
-  {
-    options(scipen = 300)
-    chromNames <-  read.table("~/Desktop/enrichment/ChrLength.txt",header=FALSE,sep="\t",comment.char = "#",stringsAsFactors = FALSE)
-    chr.name <- chromNames[i,1]
-    print(chr.name)
-    Chosen <- which(arg2==chr.name)
-    
-    if (length(Chosen)) {
-      
-      #Read data
-      if(grepl("chr", arg2[1,1]))
-      {
-        chr.name = sub("chr", "Chr", chr.name)
-      }
-      
-      Data.chr <- arg2[arg2[,1]==chr.name,]	
-      colnames(Data.chr) <- c("chr","start","end","FireEfficiency","FirePercentage","Sign","IZ")
-      FireEfficiency = Data.chr[which(Data.chr$Sign=="Peak" & Data.chr$IZ!=0),4]
-
-      S <- which(Data.chr$IZ==1)
-      Data.chr <- Data.chr[S,]
-      
-      Chr_IZ <- Data.chr%>%makeGRangesFromDataFrame()%>%GenomicRanges::reduce(min.gapwidth=10)%>%as.data.frame()
-      Chr_IZ <- data.frame(Chr_IZ,FireEfficiency=FireEfficiency)
-      IZ = rbind(IZ,Chr_IZ)
-      
-    }
-  }
-  
-  write.table(IZ,paste("/Users/wwang/Desktop/Final-Version/Final_Initialzone/IZ_Update/IZ_Replicate/",Names[k],"_Update_IZ_Sliding.bed",sep=""),quote = FALSE,row.names = FALSE,col.names = FALSE, sep="\t") 
-  
-}
+#
+# Names <- c("1708","1802","1807","1905")
+# for(k in 1:4)
+# {
+#   Path = paste("/Users/wwang/Desktop/Final-Version/Final_Initialzone/IZ_Update/SignalRatio/Sliding/",Names[k],"_SignalRatio.bed",sep="")
+#   arg2 = read.table(Path)
+#   IZ = list()
+#   print(Names[k])
+#   for(i in 1:23)
+#   {
+#     options(scipen = 300)
+#     chromNames <-  read.table("~/Desktop/enrichment/ChrLength.txt",header=FALSE,sep="\t",comment.char = "#",stringsAsFactors = FALSE)
+#     chr.name <- chromNames[i,1]
+#     print(chr.name)
+#     Chosen <- which(arg2==chr.name)
+# 
+#     if (length(Chosen)) {
+# 
+#       #Read data
+#       if(grepl("chr", arg2[1,1]))
+#       {
+#         chr.name = sub("chr", "Chr", chr.name)
+#       }
+# 
+#       Data.chr <- arg2[arg2[,1]==chr.name,]
+#       colnames(Data.chr) <- c("chr","start","end","FireEfficiency","FirePercentage","Sign","IZ")
+#       FireEfficiency = Data.chr[which(Data.chr$Sign=="Peak" & Data.chr$IZ!=0),4]
+# 
+#       S <- which(Data.chr$IZ==1)
+#       Data.chr <- Data.chr[S,]
+# 
+#       Chr_IZ <- Data.chr%>%makeGRangesFromDataFrame()%>%GenomicRanges::reduce(min.gapwidth=10)%>%as.data.frame()
+#       Chr_IZ <- data.frame(Chr_IZ,FireEfficiency=FireEfficiency)
+#       IZ = rbind(IZ,Chr_IZ)
+# 
+#     }
+#   }
+# 
+#   write.table(IZ,paste("/Users/wwang/Desktop/Final-Version/Final_Initialzone/IZ_Update/IZ_Replicate/",Names[k],"_Update_IZ_Sliding.bed",sep=""),quote = FALSE,row.names = FALSE,col.names = FALSE, sep="\t")
+# 
+# }
 
 
 
