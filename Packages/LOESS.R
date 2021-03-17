@@ -8,9 +8,21 @@ FitCurve <- function(arg1,window,overlaplength,Signal_column) # window must bigg
   
   for (i in 1:24) 
   {
-    print(i)
     
-    Select <- which(arg1[,1]==paste("Chr",i,sep = ""))
+    
+    if(grepl("chr", arg1[1,1]))
+    {
+      Select <- which(arg1[,1]==paste("chr",i,sep = ""))
+      #chr.name = sub("chr", "Chr", chr.name)
+    }
+    else
+    {
+      Select <- which(arg1[,1]==paste("Chr",i,sep = ""))
+    }
+    
+    print(paste("Chr",i,sep = ""))
+    
+    
     Chosen <- arg1[Select,]
     Chosen = Chosen[-1,]
     ceiling = nrow(Chosen)
