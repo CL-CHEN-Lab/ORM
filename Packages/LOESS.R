@@ -13,7 +13,6 @@ FitCurve <- function(arg1,window,overlaplength,Signal_column) # window must bigg
     if(grepl("chr", arg1[1,1]))
     {
       Select <- which(arg1[,1]==paste("chr",i,sep = ""))
-      #chr.name = sub("chr", "Chr", chr.name)
     }
     else
     {
