@@ -42,7 +42,7 @@ The majority of the toolkit was developped using JAVA and some fonctions are in 
 
 # Authors:
 
-[Weitao WANG](maito:weitao.want@curie.fr) and [Chunlong CHEN](mailto:chunlong.chen@curie.fr) (Institut Curie)
+[Weitao WANG](mailto:weitao.want@curie.fr) and [Chunlong CHEN](mailto:chunlong.chen@curie.fr) (Institut Curie)
 
 Don't hesitate to contact the authors or open an issue for any questions.
 
