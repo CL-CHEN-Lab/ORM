@@ -50,7 +50,7 @@ Don't hesitate to contact the authors or open an issue for any questions.
 
 # Reference:
 
-Wang W*, Klein K*, Proesmans K*, Yang H*, Marchal C, Zhu X, Borrman T, Hastie A, Weng Z, Bechhoefer J#, Chen C.L.#, Gilbert D.M.# and Rhind N#. (2021) Genome-Wide Mapping of Human DNA Replication by Optical Replication Mapping Supports a Stochastic Model of Eukaryotic Replication. Mol. Cell. https://doi.org/10.1016/j.molcel.2021.05.024. 
+Wang W*, Klein K*, Proesmans K*, Yang H*, Marchal C, Zhu X, Borrman T, Hastie A, Weng Z, Bechhoefer J#, Chen C.L.#, Gilbert D.M.# and Rhind N#. (2021) Genome-Wide Mapping of Human DNA Replication by Optical Replication Mapping Supports a Stochastic Model of Eukaryotic Replication. ***Mol. Cell.*** https://doi.org/10.1016/j.molcel.2021.05.024. 
 
 
 
